@@ -17,6 +17,9 @@ const dino3 = document.querySelector('#biggify')
 dino3.addEventListener('mouseover', ()=>{
     dino3.style.width = "200px"
 })
+dino3.addEventListener('mouseout', ()=>{
+    dino3.style.width = "162px"
+})
 const dino4 = document.querySelector('#feathers')
 dino4.addEventListener('click', function(){
     dino4.style.opacity = "50%"
@@ -24,5 +27,9 @@ dino4.addEventListener('click', function(){
 const behindButton = document.querySelector('#row')
 const button = document.querySelector('#toggle')
 toggle.addEventListener('click', ()=>{
-    behindButton.style.backgroundColor = "purple"
+    if(behindButton.style.backgroundColor === 'white'){
+        behindButton.style.backgroundColor = 'purple'
+    }else{
+        behindButton.style.backgroundColor = 'white'
+    }
 })
